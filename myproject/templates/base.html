@@ -1,0 +1,162 @@
+{% load static %}<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <!-- Theme Made By www.rastakms.ir -->
+  <title>فولاد لند</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link rel="shortcut icon" href="logo2.png"/>
+  <style type="text/css">
+	@font-face {
+		font-family: "My Custom Font1";
+		src: url("{% static '(40).ttf' %}") format('truetype');
+	}
+	p.customfont { 
+		font-family: "My Custom Font1";
+	}
+  </style>
+	
+  <style>
+  body {
+    font: 400 15px My Custom Font1;
+     
+    
+    line-height: 1.8;
+    color: #616161;
+	direction: rtl;
+  }
+  
+  * {
+  box-sizing: border-box;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  }
+  
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: rgb(115,44,123);
+    color: #fff;
+    padding: 100px 25px;
+    font-family: My Custom Font1;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    font-family: My Custom Font1;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+	font-family: My Custom Font1;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+ 
+    {% block stylesheet %}{% endblock %}  <!-- HERE -->
+     </style>
+
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    {% block body %}  <!-- HERE -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+	  
+      <a class="navbar-brand" href="#myPage">Foolad Land</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="main.html">صفحه اصلی</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+      <div class="container">
+        <ol class="breadcrumb my-4">
+          {% block breadcrumb %}
+          {% endblock %}
+        </ol>
+        {% block content %}
+        {% endblock %}
+      </div>
+    {% endblock body %}  <!-- AND HERE -->
+
+    
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div style="width:50%;" id="about" class="container-fluid">
+  <h2>ورود به حساب کاربری</h2>
+  <div class="col-sm-6" style="text-align: center; padding-bottom: 25px"><img src="{% static "img/logo.png" %}"  class="img-rounded" alt="Rastak" width="170">
+		</div>
+  <form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+<table>
+<tr>
+    <td> نام کاربری </td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>رمز عبور</td>
+    <td>{{ form.password }}</td>
+</tr>
+</table>
+
+
+<input type="submit" value="ورود">
+<input type="hidden" name="next" value="{{ next }}">
+</form>
+<div class="container signin">
+		<p>تا به حال ثبت نام نکرده اید؟ <a  href="{% url "signup" %}">ثبت نام</a>.</p>
+	</div>
+</div>
+{% endblock %}

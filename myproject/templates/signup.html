@@ -1,0 +1,31 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+  <div style="width:50%;" id="about" class="container-fluid">
+     <h2>ثبت نام</h2>
+		<p>لطفا برای ساخت اکانت، فرم زیر را تکمیل کنید.</p>
+  
+</div>
+<div style="width:50%;" id="about" class="container-fluid">
+  <form method="post" >
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <p>ساخت اکانت به این معنی است که شما <a href="#">قوانین و مقررات </a> ما را قبول دارید.</p>
+    <button type="submit">Sign up</button>
+  </form>
+  <div class="container signin">
+		<p>قبلا اکانت ساخته اید؟ <a  href="{% url "login" %}">ورود</a>.</p>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+		button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  font-family:B nazanin; 
+		}
+        img { 
+          border-radius: 8px
+        }
+		table, th, td, img {
+		  /*border: 1px solid olive;*/
+		  border-collapse: collapse;
+		  border-bottom: 1px solid #ddd
+
+		}
+		th, td {
+		  padding: 5px;
+		  text-align: center;
+		  font-family:B nazanin; 
+		  margin: 0px; 
+		  border-radius: 25px;  
+		}
+
+		div {
+		  margin-left: auto;
+		  margin-right: auto;
+		  margin-top: 80px; /*set to a negative number 1/2 of your height*/
+		  padding: 20px;
+		  text-align: center;
+		  font-family:B nazanin;  
+		  border-radius: 25px;  
+		}
+
+		a:link {
+		  text-decoration: none;
+		}
+
+		a:visited {
+		  text-decoration: none;
+		}
+
+		a:hover {
+		  text-decoration: underline;
+		}
+
+		a:active {
+		  text-decoration: underline;
+		}
